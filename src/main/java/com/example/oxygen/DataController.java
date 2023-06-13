@@ -16,7 +16,7 @@ public class DataController {
 
     @GetMapping("/data")
     public List<ProductData> getData() {
-        String sql = "SELECT * FROM productdata";
+        String sql = "SELECT * FROM product_data";
         List<ProductData> data = jdbcTemplate.query(sql, (rs, rowNum) -> {
             ProductData obj = new ProductData();
             obj.setId(rs.getInt("id"));
